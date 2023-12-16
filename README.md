@@ -32,4 +32,6 @@ We will first create a map of historical redlining boundaries, colored by HOLC g
 
 ├── HOLC_redlining.Rproj \# R project
 
+├── HOLC_redlining.html \# rendered html
+
 └── README.md
