@@ -83,7 +83,7 @@ We will investigate the legacy of redlining in current environmental (in)justice
 
 First, we need to load the relevant packages.
 
-```{r, warning = F, message = F,  results='hide'} for SQL chunks }
+```{r, warning = F, message = F,  results='hide'}
 # Load the libraries needed for the analysis
 library(tidyverse)
 library(sf)
@@ -228,11 +228,12 @@ st_crs(LA_redlining) == st_crs(la_county)
 
 ```
 
-```{r}
+```{r, warning = F, message = F,  results='hide'}
 st_crs(LA_redlining) # show ID["EPSG",4326]
-
 st_crs(la_county) # show ID["EPSG",3857]
+```
 
+```{r}
 #transform la_county to match crs with LA_redlining 
 la_county <- st_transform(la_county, crs = 4326)
 
